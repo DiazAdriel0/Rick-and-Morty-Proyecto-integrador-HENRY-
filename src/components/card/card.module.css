@@ -1,0 +1,54 @@
+/* IDEAS: Puedo poner un portal cuando se agrega un personaje que gire y aparezca la tarjeta del personaje con una animación */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    background: linear-gradient(to bottom,rgba(0, 51, 51,0.5), rgba(222, 237, 237, 0.5),rgba(0, 51, 51,0.5));
+    border: 1px solid #deeded;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #deeded;
+    transition: box-shadow 0.5s ease-in-out;
+    padding: 1rem;
+    height: 90%;
+    
+}
+/* Agregar un div copn position relative y para poner el boton X adentro ponerle position absolute */
+
+.container h2{
+    color: #deeded;
+    text-shadow: 0 0 10px #000;
+    font-size: 1rem;
+}
+
+.container:hover{
+    box-shadow: 0 0 15px #003333;
+}
+
+.container button{
+    position: relative;
+    left: 45%;
+    padding: 8px, 8px;
+    font-weight: bold;
+    width: fit-content;
+    border: 1px solid #deeded;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,rgba(0, 51, 51,0.1), rgba(222, 237, 237, 0.5),rgba(0, 51, 51,0.1));
+    color: #deeded;
+    text-shadow: 0 0 3px #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.container button:hover{
+    background-color: #deeded;
+    color: #003333;
+    text-shadow: 0 0 3px #deeded;
+}
+
+.img {
+    position: relative;
+    bottom: 5px;
+    width: 10rem;
+    border-radius: 10px;
+}
