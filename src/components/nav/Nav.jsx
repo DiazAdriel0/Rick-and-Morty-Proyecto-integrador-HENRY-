@@ -1,5 +1,6 @@
 import SearchBar from "../search bar/SearchBar";
 import style from "./nav.module.css"
+import { NavLink } from "react-router-dom";
 
 export default function Nav({onSearch}){
     function searchHandler(id){
@@ -14,6 +15,12 @@ export default function Nav({onSearch}){
         <div className={style.container}>
             <button onClick={clickHandler}>Add Random</button>
             <SearchBar onSearch={searchHandler}/>
+            <NavLink to='/about'>
+                <button>About Me</button>
+            </NavLink>
+            <NavLink to='/home'>
+                <button>Home</button>
+            </NavLink>
         </div>
     )
 }

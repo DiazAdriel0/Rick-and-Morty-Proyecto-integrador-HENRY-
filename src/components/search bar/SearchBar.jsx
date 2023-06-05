@@ -6,7 +6,8 @@ export default function SearchBar({onSearch}) {
    const [id,setId] = useState("")
 
    function handleChange(event){
-      setId(`${event.target.value}`)
+      event.preventDefault();
+      setId(`${event.target.value}`)      
    }
 
    function clickHandler(){
