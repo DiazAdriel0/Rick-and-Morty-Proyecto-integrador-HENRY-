@@ -68,7 +68,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
    return {
-      favorites: state.myFavorites,
+      favorites: state.allCharacters,
    }
 }
 
