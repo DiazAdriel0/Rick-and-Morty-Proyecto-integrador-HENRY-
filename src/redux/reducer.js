@@ -46,9 +46,17 @@ export const rootReducer = (state = initialState, {type, payload}) => {
                     myFavorites: state.myFavorites.sort((a,b) => b.id - a.id)
                 }
             }
+        /* case CLOSE://Agregado
+            const remainingClose = state.allCharacters.filter(character => character.id !== Number(payload))
+            return {
+                ...state,
+                myFavorites: remainingClose,
+                allCharacters: remainingClose,
+            }//Hasta acá */
         default:
             return {
                 ...state
+                //myFavorites: state.allCharacters para que por default se muestren todos
             }
     }
 }

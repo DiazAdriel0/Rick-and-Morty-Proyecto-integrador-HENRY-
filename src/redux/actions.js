@@ -1,7 +1,8 @@
 export const ADD_FAV = "ADD_FAV";
 export const REMOVE_FAV = "REMOVE_FAV";
 export const FILTER = "FILTER";
-export const ORDER = "ORDER"
+export const ORDER = "ORDER";
+/* export const CLOSE = "CLOSE";//Agregado */
 
 export const addFav = (character) => {
     return {
@@ -30,3 +31,8 @@ export const orderCards = (order) => {
         payload: order,
     }
 }
+
+//Agregado
+/* export const closeCard = (id) => {
+    removeFav(id)
+} */
