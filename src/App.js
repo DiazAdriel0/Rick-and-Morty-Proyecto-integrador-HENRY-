@@ -9,6 +9,7 @@ import Detail from './components/Detail/Detail'
 import Error from './components/error/Error'
 import Form from './components/form/Form';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Favorites from './components/favorites/Favorites';
 //import login from './utils/validate/login';
 //import logoRM from './assets/logo.png'
 
@@ -69,6 +70,7 @@ function App() {
             <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/detail/:id' element={<Detail />}></Route>
+            <Route path='/favorites' element={<Favorites />}/>
             <Route path='*' element={<Error />}></Route>
          </Routes>
          {/* <img src={logoRM} className="title" alt="logo" /> */}

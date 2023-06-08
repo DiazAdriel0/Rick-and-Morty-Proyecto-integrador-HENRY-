@@ -5,10 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.3);
   background-image: url("assets/background\ RyM.jpeg");
   background-blend-mode: overlay;
-  background-size: cover; */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 code {

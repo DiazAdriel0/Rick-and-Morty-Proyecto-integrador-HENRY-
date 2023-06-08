@@ -21,6 +21,9 @@ export default function Nav({onSearch}){
             <NavLink to='/home'>
                 <button>Home</button>
             </NavLink>
+            <NavLink to='/favorites'>
+                <button>Favorites</button>
+            </NavLink>
         </div>
     )
 }
