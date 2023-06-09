@@ -49,9 +49,9 @@ function Card(props) {
       <div className={style.container}>
          {
             isFav ? (
-               <button onClick={() => handleFavorite(character.id)}>❤️</button>
+               <button className={style.buttonFav}onClick={() => handleFavorite(character.id)}>❤️</button>
             ) : (
-               <button onClick={() => handleFavorite(character)}>🤍</button>
+               <button className={style.buttonFav}onClick={() => handleFavorite(character)}>🤍</button>
             )
          }
          {closeBtn && (<button onClick={handleClick} value={character.id}>X</button>)}
