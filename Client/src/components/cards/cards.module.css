@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    margin: 1rem;
+    grid-template: auto auto / 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    align-items: center;
+    justify-items: space-around;
+    max-width: 85%;
+} /* grid-template: 30rem 30rem / 1fr 1fr 1fr 1fr; */

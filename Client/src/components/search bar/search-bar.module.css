@@ -1,0 +1,34 @@
+.container{
+    margin: 2rem;
+}
+
+.container input{
+    border: 1px solid #deeded;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,rgba(0, 51, 51,0.5), rgba(222, 237, 237, 0.5),rgba(0, 51, 51,0.5));
+    color: #deeded;
+    text-shadow: 0 0 3px #000;
+    box-shadow: 0 0 15px #deeded;
+    transition: all 0.3s ease-in-out;
+}
+
+.container input:hover{
+    box-shadow: 0 0 15px #003333;
+}
+
+.container button{
+    border: 1px solid #deeded;
+    border-radius: 10px;
+    background: linear-gradient(to bottom,rgba(0, 51, 51,0.5), rgba(222, 237, 237, 0.5),rgba(0, 51, 51,0.5));
+    color: #deeded;
+    text-shadow: 0 0 3px #000;
+    box-shadow: 0 0 15px #deeded;
+    transition: all 0.3s ease-in-out;
+}
+
+.container button:hover{
+    background-color: #deeded;
+    color: #003333;
+    text-shadow: 0 0 3px #deeded;
+    box-shadow: 0 0 15px #003333;
+}
