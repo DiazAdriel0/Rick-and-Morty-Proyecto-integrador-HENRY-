@@ -10,7 +10,6 @@ import ErrorPage from './views/error/ErrorPage'
 import Form from './views/form/Form';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Favorites from './views/favorites/Favorites';
-//import login from './utils/validate/login';
 //import logoRM from './assets/logo.png'
 
 function App() {
@@ -21,26 +20,7 @@ function App() {
 
    const navigate = useNavigate()
    const [access,setAccess] = useState(false)
-   /* const EMAIL = "asdasd@asd.com"
-   const PASSWORD = "asdasd1" */
 
-   /* function login(userData){
-      if(userData.email === EMAIL && userData.password === PASSWORD){
-          setAccess(true)
-          navigate("/home")
-      }else{
-         alert("Usuario o contraseña incorrectos")
-      }
-   } */
-   /* function login(userData) {
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(`${URL}?email=${email}&password=${password}`).then(({ data }) => {
-         const { access } = data;
-         setAccess(data);
-         access && navigate('/home');
-      });
-   } */
    async function login(userData) {
       try {
          const { email, password } = userData;
@@ -51,36 +31,13 @@ function App() {
          setAccess(access);
          access && navigate('/home');
       } catch (error) {
-         console.log(error);
+         alert(error);
       }
-      
    }
    
    useEffect(() => {
       !access && navigate('/');
    }, [access])
-
-   /* function onSearch(id) {
-      axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then(({ data }) => {
-         if(data){
-            let repeated = false
-            
-            for (let i = 0; i < characters.length; i++) {
-               if(characters[i].id === data.id){
-                  repeated = true
-               }
-            }
-            if (data.name && !repeated) {
-               setCharacters((oldChars) => [...oldChars, data]);
-            }else if(repeated){
-               window.alert('No se pueden agregar personajes repetidos')
-            }
-         } else {
-            window.alert('¡No hay personajes con este ID!');
-         }
-      });
-   } */
 
    async function onSearch(id) {
       try {
@@ -102,7 +59,7 @@ function App() {
             throw new Error("'¡No hay personajes con este ID!'")
          }
       } catch (error) {
-         console.log(error);//Esto tengo que notificarselo al usuario de alguna forma, no por consola
+         alert("No existen personajes con ese ID");
       }
    }
 

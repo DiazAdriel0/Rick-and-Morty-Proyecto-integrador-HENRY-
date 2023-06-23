@@ -7,25 +7,12 @@ const initialState = {
 
 export const rootReducer = (state = initialState, {type, payload}) => {
     switch (type) {
-        /* case ADD_FAV: 
-            return {
-                ...state,
-                myFavorites: [...state.myFavorites,payload],
-                allCharacters: [...state.allCharacters,payload],
-            } */
         case ADD_FAV:
             return { 
                 ...state,
                 myFavorites: payload,
                 allCharacters: payload,
              }
-        /* case REMOVE_FAV:
-            const remaining = state.allCharacters.filter(character => character.id !== payload)
-            return {
-                ...state,
-                myFavorites: remaining,
-                allCharacters: remaining,
-            } */
         case REMOVE_FAV:
             return { 
                 ...state,
@@ -60,7 +47,6 @@ export const rootReducer = (state = initialState, {type, payload}) => {
         default:
             return {
                 ...state
-                //myFavorites: state.allCharacters para que por default se muestren todos
             }
     }
 }

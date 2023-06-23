@@ -1,23 +1,22 @@
 import { Link } from 'react-router-dom';
-//import { useParams } from 'react-router-dom';
 import style from './card.module.css'
 import { addFav, removeFav } from '../../redux/actions';
 import { connect } from 'react-redux';
 import { useState, useEffect } from 'react';
 
 function Card(props) {
-   //const {id} = useParams() y despes en Link le pasaría solo id
 
    const {character,onClose} = props
    const {addFav,removeFav, favorites} = props
    const [isFav, setIsFav] = useState(false)
    const [closeBtn, setCloseBtn] = useState(true);
 
+   //Para que no se renderice el botón X en /favorites 
    useEffect(() => {
       if(!onClose){
          setCloseBtn(false)
       }
-   },[])//Para que no se renderice el botón X en /favorites 
+   },[])
 
    useEffect(() => {
       favorites.forEach((fav) => {
@@ -39,10 +38,9 @@ function Card(props) {
 
    function handleClick (event){
       onClose(event.target.value)
-      //DESDE ACÁ
+      //Cuando cierro una tarjeta, el personaje se elimine de favoritos
       removeFav(character.id)
-      setIsFav(false)
-      //HASTA ACÁ es opcional, es para que cuando cierro una tarjeta, el personaje se elimine de favoritos
+      setIsFav(false) 
    }
    
    return (

@@ -1,6 +1,5 @@
 export default function validate(userData){
 
-    /* const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; */
     const emailRegex = /\S+@\S+\.\S+/
     const passwordRegex = /\d/;
     const passwordLengthRegex = /^.{6,10}$/;

@@ -7,7 +7,6 @@ function Favorites(props){
 
     const[aux,setAux] = useState(false)
     
-    //const favorites = useSelector((state) => state.myFavorites)
     const {myFavorites} = props
     const dispatch = useDispatch()
 
@@ -33,7 +32,6 @@ function Favorites(props){
             </select>
             <select onChange={handleFilter}>
                 <option disabled selected value="">Gender</option>
-                {/* array.map(gender => <option value="gender">gender</option>) */}
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Genderless">Genderless</option>

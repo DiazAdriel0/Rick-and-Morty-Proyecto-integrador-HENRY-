@@ -8,7 +8,6 @@ const loginController = (req,res) => {
     }else{
         res.status(200).json({access: false})
     }
-    //const access = user ? true : false //y despues la respuesta es .json({access})
 }
 
 module.exports = {loginController};

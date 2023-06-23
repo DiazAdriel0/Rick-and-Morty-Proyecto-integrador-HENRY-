@@ -23,11 +23,9 @@ export default function Detail(){
             <h3>STATUS | {character.status}</h3>
             <h3>SPECIES | {character.species}</h3>
             <h3>GENDER | {character.gender}</h3>
-            <h3>ORIGIN | {character.origin?.name}</h3>{/* Si o si va el operador condicional ? para que espere una respuesta y despues renderice */}
+            <h3>ORIGIN | {character.origin?.name}</h3>
             <h3>LOCATION | {character.location?.name}</h3>
             <img src={character.image} alt={character.name}></img>
-
-            {/* <conditionalRender /> */}
         </div>
     )
 }

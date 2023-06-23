@@ -36,14 +36,10 @@ describe("Test de RUTAS", ()=>{
         const char1 = {id:1,name:"Adri"}
         const char2 = {id:2,name:"Adri2"}
         it("Lo enviado por body debe devolverse en un array", async ()=>{
-            /* let response = await agent.post('/rickandmorty/fav')
-            expect(response.body[0]).toBeDefined() */
             const {body} = (await agent.post('/rickandmorty/fav').send(char1))
             expect(body).toContainEqual(char1)
         })
         it("Si se hace otro post debe agregarse al array", async ()=> {
-            /* let response = await agent.post('/rickandmorty/fav')
-            expect(response.body[1]).toBeDefined() */
             const {body} = await agent.post('/rickandmorty/fav').send(char2)
             expect(body).toContainEqual(char1)
             expect(body).toContainEqual(char2)
@@ -53,19 +49,12 @@ describe("Test de RUTAS", ()=>{
         const char1 = {id:1,name:"Adri"}
         const char2 = {id:2,name:"Adri2"}
         it("Debe recibir un array igual al que ya había cuando el id no existe", async()=>{
-            /* let responseGet1 = await agent.get('/rickandmorty/fav') */
             let responseDelete = await agent.delete('/rickandmorty/fav/7890823908102')
-            /* let responsePost2 = await agent.post('/rickandmorty/fav/2')
-            let responseGet2 = await agent.get('/rickandmorty/fav') */
-            /* expect(responseGet1.body).toEqual(responseGet2.body) */
             expect(responseDelete.body).toContainEqual(char1)
             expect(responseDelete.body).toContainEqual(char2)
         })
         it("Debe recibir un array con el elemento eliminado", async ()=>{
-            /* let responseGet1 = await agent.get('/rickandmorty/fav') */
             let responseDelete = await agent.delete('/rickandmorty/fav/1')
-            /* let responseGet2 = await agent.get('/rickandmorty/fav')
-            expect(responseGet1.body).not.toEqual(responseGet2.body) */
             expect(responseDelete.body).not.toContainEqual(char1)
         })
     })
