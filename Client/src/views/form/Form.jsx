@@ -1,5 +1,6 @@
 import { useState } from "react"
 import validate from "../../utils/validate/validation"
+import style from "./form.module.css"
 
 export default function Form({login}) {
 
@@ -33,19 +34,20 @@ export default function Form({login}) {
             alert("Invalid credentials")
         }
     }
-
+    
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>EMAIL</label>
-                <input type="email" name="email" value={userData.email} placeholder="Email" onChange={handleChange}/>
-                {errors.email ? <p>{errors.email}</p> : null}
+        <div className={style.container}>
+            <form className={style.form} onSubmit={handleSubmit}>
+                <div className={style.inputContainer}>
+                    <label className={style.formLabel}>EMAIL</label>
+                    <input type="email" name="email" value={userData.email} placeholder="Email" onChange={handleChange}/>
+                    {errors.email ? <p>{errors.email}</p> : <p><br></br></p>}
 
-                <label>PASSWORD</label>
-                <input type="password" name="password" value={userData.password} placeholder="Password" onChange={handleChange}/>
-                {errors.password ? <p>{errors.password}</p> : null}
-
-                <button type="submit">Submit</button>
+                    <label className={style.formLabel}>PASSWORD</label>
+                    <input type="password" name="password" value={userData.password} placeholder="Password" onChange={handleChange}/>
+                    {errors.password ? <p>{errors.password}</p> : <p><br></br></p>}
+                </div>
+                <button type="submit">Login</button>
             </form>
         </div>
     )

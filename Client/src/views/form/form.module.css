@@ -1,0 +1,50 @@
+.container {   
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    color: #deeded;
+}
+
+.form{
+    background-color: rgba(0,0,0,0.65);
+    height: 30rem;
+    width: 25rem;
+    border-radius: 5%;
+}
+
+.form input{
+    display: inline-block;
+    text-align: center;
+    background-color: transparent;
+    color: #deeded;
+    margin: 2rem 0 1rem;
+    border: none;
+    border-radius: 1rem;
+    border-bottom: 2px solid #deeded;
+}
+
+.formLabel {
+    display: block;
+    margin-top: 3rem;
+    font-weight: bold;
+}
+
+.form button{
+    margin-top: 2.5rem;
+    background-color: #000;
+    color: #deeded;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #deeded;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+.form button:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px #000;
+}
