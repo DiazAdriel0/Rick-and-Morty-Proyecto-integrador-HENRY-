@@ -6,7 +6,7 @@ const getCharById = async (req,res) => {
         const {id} = req.params
         const {data} = await axios(`${URL}${id}`)
         if(!data) throw new Error("No reconoce data de la respuesta de la api")
-        const {status,name,species,origin,image,gender} = data
+        const {status,name,species,origin,image,gender,location} = data
         if(data.id){
             const character = {
                 id: data.id,
@@ -16,6 +16,7 @@ const getCharById = async (req,res) => {
                 origin,
                 image,
                 gender,
+                location,
             }
             res.status(200).json(character)
         }else{

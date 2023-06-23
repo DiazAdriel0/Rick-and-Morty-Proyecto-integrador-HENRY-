@@ -12,7 +12,6 @@
     transition: box-shadow 0.5s ease-in-out;
     padding: 1rem;
     height: 90%;
-    
 }
 /* Agregar un div copn position relative y para poner el boton X adentro ponerle position absolute */
 
@@ -26,7 +25,7 @@
     box-shadow: 0 0 15px #003333;
 }
 
-.buttonFav{
+/* .buttonFav{
     position: relative;
     right: 45%;
     padding: 8px, 8px;
@@ -38,11 +37,12 @@
     color: #deeded;
     text-shadow: 0 0 3px #000;
     transition: all 0.3s ease-in-out;
-}
+} */
 
-.container button{
+/* .container button{
     position: relative;
     left: 45%;
+    margin: 3px;
     padding: 8px, 8px;
     font-weight: bold;
     width: fit-content;
@@ -52,7 +52,7 @@
     color: #deeded;
     text-shadow: 0 0 3px #000;
     transition: all 0.3s ease-in-out;
-}
+} */
 
 .container button:hover{
     background-color: #deeded;
@@ -65,4 +65,25 @@
     bottom: 5px;
     width: 10rem;
     border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.divButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.buttonFav{
+    padding: 0;
+}
+
+.divButtons button {
+    background: none;
+    color: #deeded;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: larger;
+    text-align: center;
 }

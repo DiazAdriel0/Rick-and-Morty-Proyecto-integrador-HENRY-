@@ -1,9 +1,18 @@
 .container {
     display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    gap: 16px;
+    max-width: 100vw;
+    margin-bottom: 5%;
+  }/* {
+    display: grid;
     margin: 1rem;
     grid-template: auto auto / 1fr 1fr 1fr 1fr;
     grid-gap: 1.5rem;
     align-items: center;
     justify-items: space-around;
     max-width: 85%;
-} /* grid-template: 30rem 30rem / 1fr 1fr 1fr 1fr; */
+} */ /* grid-template: 30rem 30rem / 1fr 1fr 1fr 1fr; */

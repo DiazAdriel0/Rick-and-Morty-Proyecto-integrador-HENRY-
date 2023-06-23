@@ -40,11 +40,11 @@ export default function Form({login}) {
             <form className={style.form} onSubmit={handleSubmit}>
                 <div className={style.inputContainer}>
                     <label className={style.formLabel}>EMAIL</label>
-                    <input type="email" name="email" value={userData.email} placeholder="Email" onChange={handleChange}/>
+                    <input type="email" name="email" value={userData.email} placeholder="Insert email" onChange={handleChange}/>
                     {errors.email ? <p>{errors.email}</p> : <p><br></br></p>}
 
                     <label className={style.formLabel}>PASSWORD</label>
-                    <input type="password" name="password" value={userData.password} placeholder="Password" onChange={handleChange}/>
+                    <input type="password" name="password" value={userData.password} placeholder="Insert password" onChange={handleChange}/>
                     {errors.password ? <p>{errors.password}</p> : <p><br></br></p>}
                 </div>
                 <button type="submit">Login</button>

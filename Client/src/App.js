@@ -19,7 +19,7 @@ function App() {
    const [characters, setCharacters] = useState([]);
 
    const navigate = useNavigate()
-   const [access,setAccess] = useState(false)
+   const [access,setAccess] = useState(true)
 
    async function login(userData) {
       try {
